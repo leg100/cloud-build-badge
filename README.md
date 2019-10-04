@@ -4,6 +4,10 @@
 
 A Cloud Function that generates Cloud Build badges.
 
+## Summary
+
+The function subscribes to events published by Cloud Build. The events contain information on the status of the progress and completion of a build. The function copies a badge reflecting that status to a known URL, which can be hard-coded in a repository `README` (as seen above).
+
 ## Installation
 
 ### Upload Badges
@@ -43,9 +47,19 @@ Grant permissions to read and write to the bucket:
 gsutil iam ch serviceAccount:cloud-build-badge@${GOOGLE_CLOUD_PROJECT}.iam.gserviceaccount.com:legacyBucketReader,legacyObjectReader,legacyBucketWriter gs://${GOOGLE_CLOUD_PROJECT}-badges/
 ```
 
+## Customise Path
+
+You can customise the path in the bucket at which the badge gets published, using a template string. The default is:
+
+`builds/${repo}/branches/${branch}.svg`
+
+Where `${repo}` and `${branch}` refer to the name of the repository and branch that triggered the build. Only these two variables are available.
+
+Set the environment variable `TEMPLATE_PATH` accordingly when deploying the function in the next step.
+
 ## Deploy
 
-Deploy the function:
+Deploy the function. Note you can customise the path at which the badge gets produced, using a template string,
 
 ```bash
 gcloud functions deploy cloud-build-badge \
@@ -54,8 +68,20 @@ gcloud functions deploy cloud-build-badge \
     --entry-point build_badge \
     --service-account cloud-build-badge@${GOOGLE_CLOUD_PROJECT}.iam.gserviceaccount.com \
     --trigger-topic=cloud-builds \
-    --set-env-vars BADGES_BUCKET=${GOOGLE_CLOUD_PROJECT}-badges
+    --set-env-vars BADGES_BUCKET=${GOOGLE_CLOUD_PROJECT}-badges,TEMPLATE_PATH='builds/${repo}/branches/${branch}.svg'
 ```
+
+## Use
+
+Embed the badge in your README, replacing `${repo}` and `${branch}` with the name of your repository and the branch you want to show the latest status for:
+
+```
+![Cloud Build](https://storage.googleapis.com/${GOOGLE_CLOUD_PROJECT}-badges/builds/${repo}/branches/${branch})
+```
+
+If you've customised the path using `TEMPLATE_PATH`, ensure it is reflected in the URL above.
+
+Now trigger a Cloud Build build (e.g. by pushing a commit, or directly via the Google Cloud console). You should see the badge update to reflect the build status.
 
 ## Test
 

@@ -4,6 +4,7 @@ import base64
 import json
 import os
 import re
+from string import Template
 
 
 def copy_badge(bucket_name, obj, new_obj):
@@ -32,8 +33,11 @@ def build_badge(event, context):
     decoded = base64.b64decode(event['data']).decode('utf-8')
     data = json.loads(decoded)
 
+    bucket = os.environ['BADGES_BUCKET']
+
     try:
         repo = data['source']['repoSource']['repoName']
+        branch = data['source']['repoSource']['branchName']
 
         if repo.startswith('github_') or repo.startswith('bitbucket_'):
             # mirrored repo format: (github|bitbucket)_<owner>_<repo>
@@ -41,11 +45,13 @@ def build_badge(event, context):
     except KeyError:
         # github app
         repo = data['substitutions']['REPO_NAME']
+        branch = data['substitutions']['BRANCH_NAME']
     finally:
-        src = 'badges/{}.svg'.format(data['status'].lower())
-        dest = 'builds/{}.svg'.format(repo)
+        tmpl = os.environ.get('TEMPLATE_PATH',
+                'builds/${repo}/branches/${branch}.svg')
 
-        bucket = os.environ['BADGES_BUCKET']
+        src = 'badges/{}.svg'.format(data['status'].lower())
+        dest = Template(tmpl).substitute(repo=repo, branch=branch)
 
         copy_badge(bucket, src, dest)
 

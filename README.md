@@ -1,5 +1,7 @@
 # cloud-build-badge
 
+![cloud build status](https://storage.googleapis.com/louis-garman-ci-badges/builds/cloud-build-badge.svg)
+
 A Cloud Function that generates Cloud Build badges.
 
 ## Installation

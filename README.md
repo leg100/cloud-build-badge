@@ -2,11 +2,11 @@
 
 ![cloud build status](https://storage.googleapis.com/louis-garman-ci-badges/builds/cloud-build-badge/branches/master.svg)
 
-A Cloud Function that generates Cloud Build badges.
+Embed a badge in your repository's `README` (as above) that reflects the status of its latest build in Cloud Build.
 
 ## Summary
 
-The function subscribes to events published by Cloud Build. The events contain information on the status of the progress and completion of a build. The function copies a badge reflecting that status to a known URL, which can be hard-coded in a repository `README` (as seen above).
+Deploy a Google Cloud Function to auto-update your repository's badge. The function subscribes to events published by Cloud Build. The events contain information on the status of the progress and completion of a build. The function copies a badge reflecting that status to a known URL, which can be hard-coded in a repository `README`.
 
 ## Installation
 
@@ -81,7 +81,7 @@ Embed the badge in your README, replacing `${repo}` and `${branch}` with the nam
 
 If you've customised the path using `TEMPLATE_PATH`, ensure it is reflected in the URL above.
 
-Now trigger a Cloud Build build (e.g. by pushing a commit, or directly via the Google Cloud console). You should see the badge update to reflect the build status.
+Now trigger a build in Cloud Build (e.g. by pushing a commit, or directly via the Google Cloud console). You should see the badge update to reflect the build status.
 
 ## Test
 

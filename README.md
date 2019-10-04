@@ -6,9 +6,19 @@ Embed a badge in your repository's `README` (as above) that reflects the status 
 
 ## Summary
 
-Deploy a Google Cloud Function to auto-update your repository's badge. The function subscribes to events published by Cloud Build. The events contain information on the status of the progress and completion of a build. The function copies a badge reflecting that status to a known URL, which can be hard-coded in a repository `README`.
+Deploys a Google Cloud Function to auto-update your repository's badge. The function subscribes to events published by Cloud Build. The events contain information on the status of the progress and completion of a build. The function copies a badge reflecting that status to a known URL, which can be hard-coded in a repository `README`.
 
 ## Installation
+
+It's assumed you've already integrated your repository with Cloud Build. If not, the instructinons for doing so are [here](https://cloud.google.com/cloud-build/docs/running-builds/automate-builds).
+
+The function supports the following integrations:
+
+* Cloud Build Github App
+* Github (mirrored)
+* Bitbucket Cloud (mirrored)
+* Cloud Source Repositories
+
 
 ### Upload Badges
 

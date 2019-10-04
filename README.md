@@ -2,7 +2,16 @@
 
 ![cloud build status](https://storage.googleapis.com/louis-garman-ci-badges/builds/cloud-build-badge/branches/master.svg)
 
-Embed a badge in your repository's `README` (as above) that reflects the status of the latest build in Cloud Build.
+Embed a badge in your repository's `README` that reflects the status of the latest build in Cloud Build:
+
+* ![](./badges/queued.svg)
+* ![](./badges/working.svg)
+* ![](./badges/success.svg)
+* ![](./badges/timeout.svg)
+* ![](./badges/cancelled.svg)
+* ![](./badges/failure.svg)
+* ![](./badges/internal_error.svg)
+* ![](./badges/status_unknown.svg)
 
 ## Summary
 

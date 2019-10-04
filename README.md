@@ -47,7 +47,7 @@ Grant permissions to read and write to the bucket:
 gsutil iam ch serviceAccount:cloud-build-badge@${GOOGLE_CLOUD_PROJECT}.iam.gserviceaccount.com:legacyBucketReader,legacyObjectReader,legacyBucketWriter gs://${GOOGLE_CLOUD_PROJECT}-badges/
 ```
 
-# Customise Path
+## Customise Path
 
 You can customise the path in the bucket at which the badge gets published, using a template string. The default is:
 

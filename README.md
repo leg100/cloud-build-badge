@@ -18,11 +18,14 @@ Next enable anyone on the internet to be able to read the badges (necessary if y
 gsutil defacl ch -u AllUsers:R gs://${GOOGLE_CLOUD_PROJECT}-badges/
 ```
 
-Then upload the pre-generated badges in `./badges` to the bucket (ensure they go into a directory on the bucket named `badges/`):
+Then upload the pre-generated badges in `./badges` to the bucket. Ensure they go into a directory on the bucket named `badges/`. Disable caching to ensure the latest updates to a badge are visible to end-users.
 
 ```bash
-gsutil -m cp ./badges/*.svg gs://${GOOGLE_CLOUD_PROJECT}-badges/badges/
+gsutil -m -h "Cache-Control:no-cache,max-age=0" \
+  cp ./badges/*.svg gs://${GOOGLE_CLOUD_PROJECT}-badges/badges/
 ```
+
+Note: the `-m` flag uploads the badges in parallel, speeding it up.
 
 ### Configure IAM
 

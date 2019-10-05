@@ -15,7 +15,7 @@ Embed a badge in your repository's `README` that reflects the status of the late
 
 ## Summary
 
-Deploys a Google Cloud Function to auto-update your repository's badge. The function subscribes to events published by Cloud Build. The events contain information on the status of the progress and completion of a build. The function copies a badge reflecting that status to a known URL, which can be hard-coded in a repository `README`.
+Deploy a Google Cloud Function to auto-update your repository's badge. The function subscribes to events published by Cloud Build. The events contain information on the status of the progress and completion of a build. The function copies a badge reflecting that status to a known URL, which can be hard-coded in a repository `README`.
 
 ## Installation
 

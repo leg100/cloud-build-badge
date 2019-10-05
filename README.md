@@ -78,7 +78,7 @@ Set the environment variable `TEMPLATE_PATH` accordingly when deploying the func
 
 ## Deploy
 
-Deploy the function. Note you can customise the path at which the badge gets produced, using a template string,
+Deploy the function:
 
 ```bash
 gcloud functions deploy cloud-build-badge \

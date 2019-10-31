@@ -1,6 +1,6 @@
 # cloud-build-badge
 
-![cloud build status](https://storage.googleapis.com/louis-garman-ci-badges/builds/cloud-build-badge/branches/master.svg)
+![cloud build status](https://storage.googleapis.com/automatize-ci-badges/builds/cloud-build-badge/branches/master.svg)
 
 Embed a badge in your repository's `README` that reflects the status of the latest build in Cloud Build:
 

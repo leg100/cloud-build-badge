@@ -19,7 +19,7 @@ Deploy a Google Cloud Function to auto-update your repository's badge. The funct
 
 ## Installation
 
-It's assumed you've already integrated your repository with Cloud Build. If not, the instructinons for doing so are [here](https://cloud.google.com/cloud-build/docs/running-builds/automate-builds).
+It's assumed you've already integrated your repository with Cloud Build. If not, the instructions for doing so are [here](https://cloud.google.com/cloud-build/docs/running-builds/automate-builds).
 
 The function supports the following integrations:
 

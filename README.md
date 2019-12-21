@@ -95,7 +95,7 @@ gcloud functions deploy cloud-build-badge \
 Embed the badge in your README, replacing `${repo}` and `${branch}` with the name of your repository and the branch you want to show the latest status for:
 
 ```
-![Cloud Build](https://storage.googleapis.com/${GOOGLE_CLOUD_PROJECT}-badges/builds/${repo}/branches/${branch})
+![Cloud Build](https://storage.googleapis.com/${GOOGLE_CLOUD_PROJECT}-badges/builds/${repo}/branches/${branch}.svg)
 ```
 
 If you've customised the path using `TEMPLATE_PATH`, ensure it is reflected in the URL above.

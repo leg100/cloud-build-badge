@@ -114,4 +114,4 @@ Ensure the following environment variables are set first:
 
 * `BADGES_BUCKET`: the name of the bucket containing the badges
 
-You'll also need to install [jq](https://stedolan.github.io/jq/) and [xq](https://github.com/jeffbr13/xq).
+You'll also need to install [jq](https://stedolan.github.io/jq/) and [yq](https://github.com/kislyuk/yq).

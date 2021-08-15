@@ -20,3 +20,8 @@ direnv/
 .envrc
 
 badges/
+
+tests/
+Makefile
+README.md
+cloudbuild.yaml

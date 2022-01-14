@@ -37,7 +37,7 @@ def build_badge(event, context):
 
     repo = None
     branch = None
-    print('Payload : ', decoded)
+    print('Payload : ', data)
     try:
         repo = data['source']['repoSource']['repoName']
         branch = data['source']['repoSource']['branchName']

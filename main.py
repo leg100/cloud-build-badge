@@ -1,9 +1,9 @@
 from google.cloud import storage, exceptions
 
+import logging
 import base64
 import json
 import os
-import re
 from string import Template
 
 
@@ -35,6 +35,9 @@ def build_badge(event, context):
 
     bucket = os.environ['BADGES_BUCKET']
 
+    repo = None
+    branch = None
+    print('Payload : ', decoded)
     try:
         repo = data['source']['repoSource']['repoName']
         branch = data['source']['repoSource']['branchName']

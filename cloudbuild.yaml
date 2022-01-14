@@ -1,19 +1,17 @@
 steps:
-  - name: "gcr.io/cloud-builders/gcloud"
+  - name: gcr.io/cloud-builders/gcloud
     entrypoint: bash
-    args: 
+    args:
       - -c
       - |
-
-      if gsutil ls gs://$PROJECT_ID 2>&1 | grep -q 'BucketNotFoundException'; then
-        gsutil mb gs://$PROJECT_ID-badges
-        gsutil defacl ch -u AllUsers:R gs://$PROJECT_ID-badges/
-        gsutil -m -h "Cache-Control:no-cache,max-age=0" cp ./badges/*.svg gs://$PROJECT_ID-badges/badges/
-      fi
-
-      gcloud functions deploy cloud-build-badge \
-      --runtime python37                                                          \
-      --entry-point build_badge                                                   \
-      --trigger-topic=cloud-builds                                                \
-      --update-labels commitid=$COMMIT_SHA                                        \
-      --set-env-vars BADGES_BUCKET=$PROJECT_ID-badges,TEMPLATE_PATH='builds/${repo}/${branch}.svg'
+        if gsutil ls gs://$PROJECT_ID-badges 2>&1 | grep -q 'BucketNotFoundException'; then
+          gsutil mb gs://$PROJECT_ID-badges
+          gsutil defacl ch -u AllUsers:R gs://$PROJECT_ID-badges/
+          gsutil -m -h "Cache-Control:no-cache,max-age=0" cp ./badges/*.svg gs://$PROJECT_ID-badges/badges/
+        fi
+        gcloud functions deploy cloud-build-badge \
+        --runtime python37                                                          \
+        --entry-point build_badge                                                   \
+        --trigger-topic=cloud-builds                                                \
+        --update-labels commitid=$COMMIT_SHA                                        \
+        --set-env-vars BADGES_BUCKET=$PROJECT_ID-badges,TEMPLATE_PATH='builds/${repo}/${branch}.svg'

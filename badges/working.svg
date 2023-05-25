@@ -1,1 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="122" height="20"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="122" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path fill="#555" d="M0 0h69v20H0z"/><path fill="#dfb317" d="M69 0h53v20H69z"/><path fill="url(#b)" d="M0 0h122v20H0z"/></g><g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110"> <text x="355" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="590">cloud build</text><text x="355" y="140" transform="scale(.1)" textLength="590">cloud build</text><text x="945" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="430">working</text><text x="945" y="140" transform="scale(.1)" textLength="430">working</text></g> </svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="140.9" height="20" viewBox="0 0 1409 200" role="img" aria-label="cloud-build: working">
+  <title>cloud-build: working</title>
+  <linearGradient id="a" x2="0" y2="100%">
+    <stop offset="0" stop-opacity=".1" stop-color="#EEE"/>
+    <stop offset="1" stop-opacity=".1"/>
+  </linearGradient>
+  <mask id="m"><rect width="1409" height="200" rx="30" fill="#FFF"/></mask>
+  <g mask="url(#m)">
+    <rect width="871" height="200" fill="#555"/>
+    <rect width="538" height="200" fill="#DB1" x="871"/>
+    <rect width="1409" height="200" fill="url(#a)"/>
+  </g>
+  <g aria-hidden="true" fill="#fff" text-anchor="start" font-family="Verdana,DejaVu Sans,sans-serif" font-size="110">
+    <text x="220" y="148" textLength="611" fill="#000" opacity="0.25">cloud-build</text>
+    <text x="210" y="138" textLength="611">cloud-build</text>
+    <text x="926" y="148" textLength="438" fill="#000" opacity="0.25">working</text>
+    <text x="916" y="138" textLength="438">working</text>
+  </g>
+  <image x="40" y="35" width="130" height="130" xlink:href="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTEuOCAxOEgwdjZoNnYtMS44SDEuOHpNMjMgMGgtOC45M2EyIDIgMCAwMC0xLjY3Ljg5TDkgNS45OUgxYTEgMSAwIDAwLTEgMXY1LjVsMy41IDMuNjEgMS4yLTEuMjkgMS41IDEuNUw1IDE3LjUzbDEuNDggMS40OCAxLjIyLTEuMjIgMS41IDEuNTFMOCAyMC41bDMuNSAzLjVIMTdhMSAxIDAgMDAxLTF2LThsNS4xMS0zLjRBMiAyIDAgMDAyNCA5LjkyVjFhMSAxIDAgMDAtMS0xem0tNSA5YTMgMyAwIDExMC02IDMgMyAwIDAxMCA2eiIvPjwvc3ZnPgo="/>
+<style xmlns="" class="darkreader darkreader--fallback">html, body, body :not(iframe) {
+    background-color: #191a1b !important;
+    border-color: #796f62 !important;
+    color: #ece8e2 !important;
+}</style></svg>

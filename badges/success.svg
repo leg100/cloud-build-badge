@@ -1,20 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="138.9" height="20" viewBox="0 0 1389 200" role="img" aria-label="cloud-build: passing">
-  <title>cloud-build: passing</title>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="139.2" height="20" viewBox="0 0 1392 200" role="img" aria-label="cloud-build: success">
+  <title>cloud-build: success</title>
   <linearGradient id="a" x2="0" y2="100%">
     <stop offset="0" stop-opacity=".1" stop-color="#EEE"/>
     <stop offset="1" stop-opacity=".1"/>
   </linearGradient>
-  <mask id="m"><rect width="1389" height="200" rx="30" fill="#FFF"/></mask>
+  <mask id="m"><rect width="1392" height="200" rx="30" fill="#FFF"/></mask>
   <g mask="url(#m)">
     <rect width="871" height="200" fill="#555"/>
-    <rect width="518" height="200" fill="#3C1" x="871"/>
-    <rect width="1389" height="200" fill="url(#a)"/>
+    <rect width="521" height="200" fill="#3C1" x="871"/>
+    <rect width="1392" height="200" fill="url(#a)"/>
   </g>
   <g aria-hidden="true" fill="#fff" text-anchor="start" font-family="Verdana,DejaVu Sans,sans-serif" font-size="110">
     <text x="220" y="148" textLength="611" fill="#000" opacity="0.25">cloud-build</text>
     <text x="210" y="138" textLength="611">cloud-build</text>
-    <text x="926" y="148" textLength="418" fill="#000" opacity="0.25">passing</text>
-    <text x="916" y="138" textLength="418">passing</text>
+    <text x="926" y="148" textLength="421" fill="#000" opacity="0.25">success</text>
+    <text x="916" y="138" textLength="421">success</text>
   </g>
   <image x="40" y="35" width="130" height="130" xlink:href="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTEuOCAxOEgwdjZoNnYtMS44SDEuOHpNMjMgMGgtOC45M2EyIDIgMCAwMC0xLjY3Ljg5TDkgNS45OUgxYTEgMSAwIDAwLTEgMXY1LjVsMy41IDMuNjEgMS4yLTEuMjkgMS41IDEuNUw1IDE3LjUzbDEuNDggMS40OCAxLjIyLTEuMjIgMS41IDEuNTFMOCAyMC41bDMuNSAzLjVIMTdhMSAxIDAgMDAxLTF2LThsNS4xMS0zLjRBMiAyIDAgMDAyNCA5LjkyVjFhMSAxIDAgMDAtMS0xem0tNSA5YTMgMyAwIDExMC02IDMgMyAwIDAxMCA2eiIvPjwvc3ZnPgo="/>
 <style xmlns="" class="darkreader darkreader--fallback">html, body, body :not(iframe) {

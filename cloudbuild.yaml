@@ -10,7 +10,7 @@ steps:
           gsutil -m -h "Cache-Control:no-cache,max-age=0" cp ./badges/*.svg gs://$PROJECT_ID-badges/badges/
         fi
         gcloud functions deploy cloud-build-badge \
-        --runtime python37                                                          \
+        --runtime python39                                                          \
         --entry-point build_badge                                                   \
         --trigger-topic=cloud-builds                                                \
         --update-labels commitid=$COMMIT_SHA                                        \
